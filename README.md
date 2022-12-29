@@ -42,12 +42,13 @@ make install
 ```
 
 ## Setup Crontab
-You can run AYSA via a crontab on several hours you might have fallen asleep:
+You can run AYSA via a crontab on several hours you might have fallen asleep.
+Execute `crontab -e` to edit your crontabs.
 
 For example, run it at 11 and 12pm on weekdays and on 1am and 2am on weekends:
 ```bash
 # m h  dom mon dow   command
 0 1-2 * * 6,0 DISPLAY=:0 /usr/local/bin/aysa
-0 11,12 * * 1-5 DISPLAY=:0 /usr/local/bin/aysa
+0 11,12 * * 1-5 DISPLAY=:0 /usr/local/bin/aysa 60 # <-- Give me some more time to react here
 ```
 Adjust this to your personal needs.
