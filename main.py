@@ -83,4 +83,4 @@ if __name__ == '__main__':
         if sys.argv[1].isnumeric():
             time_to_shutdown = int(sys.argv[1])
 
-    asyncio.run(App(time_to_shutdown, debug=True).exec())
+    asyncio.run(App(time_to_shutdown, debug=False).exec())
