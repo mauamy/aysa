@@ -3,7 +3,17 @@ This application provides a simple UI to automatically shut down your PC if no i
 have fallen asleep in front of your streaming PC.
 ![](docs/example.png)
 
-## Requirements
+## Usage
+```bash
+aysa [time_to_shutdown_in_sec|default=30]
+```
+
+## Install
+You can either download the latest [release](https://github.com/mauamy/aysa/releases/latest) or 
+build it from source.
+
+## Build from Source
+### Requirements
 - virtualenv
 
 #### Install:
@@ -11,7 +21,6 @@ have fallen asleep in front of your streaming PC.
 sudo apt install virtualenv
 ```
 
-## Build
 ```bash
 git clone <>
 cd <>
@@ -22,16 +31,9 @@ source venv/bin/activate
 
 # build
 make build
-```
 
-## Install
-```commandline
+# install 
 make install
-```
-
-## Usage
-```bash
-aysa [time_to_shutdown_in_sec|default=30]
 ```
 
 ## Setup Crontab
