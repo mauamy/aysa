@@ -1,0 +1,5 @@
+altgraph==0.17.3
+pycairo==1.23.0
+pyinstaller==5.7.0
+pyinstaller-hooks-contrib==2022.14
+tk==0.1.0
