@@ -11,6 +11,17 @@ win_width = 600
 win_height = 200
 
 
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+
 class App:
     def __init__(self, time_to_shutdown, debug=False):
         self.tts = time_to_shutdown
@@ -70,7 +81,7 @@ class Window(tk.Tk):
 
     async def play_notification_sound(self):
         try:
-            sound = AudioSegment.from_wav('./data/notification.wav')
+            sound = AudioSegment.from_wav(resource_path('data/notification.wav'))
             play(sound)
         except Exception as e:
             print(f"Play sound Error: {e}")
