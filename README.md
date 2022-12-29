@@ -9,8 +9,13 @@ aysa [time_to_shutdown_in_sec|default=30]
 ```
 
 ## Install
-You can either download the latest [release](https://github.com/mauamy/aysa/releases/latest) or 
-build it from source.
+Download the `aysa` binary from the latest [release](https://github.com/mauamy/aysa/releases/latest) and install it:
+```bash
+chmod +x aysa
+sudo cp aysa /usr/local/bin/
+```
+
+You can also build it from source.
 
 ## Build from Source
 ### Requirements
