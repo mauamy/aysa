@@ -3,6 +3,9 @@ import asyncio
 import os
 import sys
 
+from pydub import AudioSegment
+from pydub.playback import play
+
 
 win_width = 600
 win_height = 200
@@ -65,7 +68,15 @@ class Window(tk.Tk):
             self.root.update()
             await asyncio.sleep(.1)
 
+    async def play_notification_sound(self):
+        try:
+            sound = AudioSegment.from_wav('./data/notification.wav')
+            play(sound)
+        except Exception as e:
+            print(f"Play sound Error: {e}")
+
     async def count_down(self):
+        await self.play_notification_sound()
         while self.time_to_shutdown > 0:
             self.time_to_shutdown -= 1
             self.update_timer()
@@ -78,9 +89,9 @@ class Window(tk.Tk):
 
 
 if __name__ == '__main__':
-    time_to_shutdown = 30
+    time_to_shutdown = 10
     if len(sys.argv) == 2:
         if sys.argv[1].isnumeric():
             time_to_shutdown = int(sys.argv[1])
 
-    asyncio.run(App(time_to_shutdown, debug=False).exec())
+    asyncio.run(App(time_to_shutdown, debug=True).exec())

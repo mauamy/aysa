@@ -2,5 +2,3 @@ venv/
 dist/
 build/
 .idea/
-
-*.spec
