@@ -100,9 +100,9 @@ class Window(tk.Tk):
 
 
 if __name__ == '__main__':
-    time_to_shutdown = 10
+    time_to_shutdown = 30
     if len(sys.argv) == 2:
         if sys.argv[1].isnumeric():
             time_to_shutdown = int(sys.argv[1])
 
-    asyncio.run(App(time_to_shutdown, debug=True).exec())
+    asyncio.run(App(time_to_shutdown, debug=False).exec())
