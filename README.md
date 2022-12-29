@@ -22,8 +22,8 @@ sudo apt install virtualenv
 ```
 
 ```bash
-git clone <>
-cd <>
+git clone https://github.com/mauamy/aysa.git
+cd aysa
 
 # create and activate your virtual python environment
 virtualenv venv
