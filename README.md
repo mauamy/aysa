@@ -1,4 +1,4 @@
-# AYSA - **A**re **Y**ou **S**till **A**live
+# AYSA - **A**re **Y**ou **S**till **A**live?
 This application provides a simple UI to automatically shut down your PC if no input is provided, e.g. if you
 have fallen asleep in front of your streaming PC.
 ![](docs/example.png)
